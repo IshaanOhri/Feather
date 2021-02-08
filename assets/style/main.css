@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   font-family: "Press Start 2P", cursive;
-  cursor: url('../cursor.svg'), auto;
+  cursor: url("../cursor.svg"), auto;
+  color: white;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 #myVideo {
@@ -21,7 +29,6 @@ button {
   width: fit-content;
   line-height: 120%;
   background: black;
-  color: white;
 }
 
 button:active {
@@ -45,7 +52,7 @@ button:active {
   transform: translate(-50%, -50%);
 }
 
-#session-id{
+#session-id {
   width: 30vw;
   padding: 15px 20px;
   border: 5px solid white;
@@ -53,10 +60,9 @@ button:active {
   outline: none;
   line-height: 120%;
   background: black;
-  color: white;
   font-size: 15px;
 }
 
-#join-msg{
-  color: white;
+h1 {
+  font-size: 3em;
 }
