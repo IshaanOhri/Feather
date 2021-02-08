@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  font-family: "Press Start 2P", cursive;
+  cursor: url('../cursor.svg'), auto;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+button {
+  padding: 15px 20px;
+  border: 5px solid white;
+  box-shadow: 5px 5px #343434;
+  outline: none;
+  width: fit-content;
+  line-height: 120%;
+  background: black;
+  color: white;
+}
+
+button:active {
+  box-shadow: 8px 8px #343434;
+  transform: translateY(4px);
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#session-id{
+  width: 30vw;
+  padding: 15px 20px;
+  border: 5px solid white;
+  box-shadow: 5px 5px #343434;
+  outline: none;
+  line-height: 120%;
+  background: black;
+  color: white;
+  font-size: 15px;
+}
+
+#join-msg{
+  color: white;
+}
