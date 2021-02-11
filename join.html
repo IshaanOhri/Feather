@@ -12,11 +12,23 @@
       <source src="assets/glitch_1.mp4" type="video/mp4" />
     </video>
 
+    <audio id="typewriter">
+      <!-- <source src="assets/key1.ogg" type="audio/ogg"> -->
+      <source src="assets/keyboard.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+
+    <audio id="mouse">
+      <!-- <source src="assets/key1.ogg" type="audio/ogg"> -->
+      <source src="assets/mouse.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+
     <div class="btn-center">
       <label for="" id="join-msg">Enter the Session ID below: </label>
       <br />
       <br />
-      <input id="session-id" class="center"/>
+      <input type="text" id="session-id" class="center"/>
       <br />
       <br />
       <br />
@@ -28,4 +40,5 @@
       <button id="back" onclick="location.href = 'index.html';">Back</button>
     </div>
   </body>
+  <script src="./assets/js/join.js"></script>
 </html>

@@ -66,3 +66,154 @@ button:active {
 h1 {
   font-size: 3em;
 }
+
+html {
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#monitor {
+  margin: 0;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#screen {
+  position: relative;
+  overflow: hidden;
+  border: 10px solid transparent;
+  border-image-source: url(../bg6.png);
+  border-image-slice: 30 fill;
+  border-image-outset: 0;
+  padding: 15px 15px 35px 15px;
+}
+
+#crt,
+pre {
+  font-family: "VT323", monospace;
+}
+
+#crt {
+  width: 80ch; /* This makes 80 monospace characters fit on the screen */
+  height: calc(80ch * 0.8);
+  font-size: max(
+    1rem,
+    2.2vmin
+  ); /* Scale the font-size relative to the minimum screen dimension */
+  position: relative;
+  background: #119c5e;
+  background-image: radial-gradient(
+    ellipse,
+    #119c5e 0%,
+    #050505 90%
+  );
+  animation: on 2s linear;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+#crt:after {
+  content: " ";
+  opacity: 0;
+  background: #fff;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+#crt.turn-off:after {
+  animation: turnOff 0.4s ease-in-out;
+  /* animation-fill-mode: forwards; */
+}
+
+#crt:not(.off):before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0.1) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 8px;
+  z-index: 2;
+  pointer-events: none;
+  animation: fadeIn 2s;
+}
+
+/* Screen turned off */
+#crt.off {
+  background: #050505;
+}
+#crt.off:before {
+  background: none;
+}
+#crt.off * {
+  display: none !important;
+}
+
+body.fullscreen #crt {
+  font-size: 2.5rem;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.terminal {
+  position: relative;
+  height: 100%;
+  padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-word;
+  text-transform: uppercase;
+  animation: textShadow 4s infinite;
+}
+
+.terminal,
+.fullscreen {
+  color: #5bf870;
+  text-shadow: 0 0 5px #c8c8c8;
+}
+
+.scanline {
+  width: 100%;
+  height: 100px;
+  z-index: 8;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  opacity: 0.1;
+  position: absolute;
+  bottom: 100%;
+  pointer-events: none;
+  animation: scanline 10s linear infinite;
+}
