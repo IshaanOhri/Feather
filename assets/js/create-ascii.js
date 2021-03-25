@@ -45,7 +45,7 @@
     this.canvas = document.createElement("canvas");
     this.ctx = this.canvas.getContext("2d");
 
-    var peer = new Peer('18BCE0265');
+    var peer = new Peer();
 
     peer.on("open", function (id) {
       console.log("My peer ID is: " + id);
