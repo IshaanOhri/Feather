@@ -167,8 +167,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(80ch * 0.9); /* This makes 80 monospace characters fit on the screen */
-  height: calc(80ch * 0.75);
+  width: 850px; 
+  height: 700px;
   border: 50px solid transparent;
   border-image-source: url(../bg6.png);
   border-image-slice: 30 fill;
@@ -185,6 +185,8 @@ html {
   border-image-outset: 0; */
   padding: 15px 15px 35px 15px;
   /* z-index: 2; */
+  width: 850px; 
+  height: 700px;
 }
 
 #crt,
@@ -193,8 +195,8 @@ pre {
 }
 
 #crt {
-  width: calc(80ch * 0.7); /* This makes 80 monospace characters fit on the screen */
-  height: calc(80ch * 0.6);
+  width: 700px; 
+  height: 600px;
   font-size: max(
     1rem,
     2.2vmin
@@ -205,6 +207,10 @@ pre {
   animation: on 2s linear;
   transition: all 0.5s;
   z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #crt:after {
