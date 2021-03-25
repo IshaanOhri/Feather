@@ -1,6 +1,7 @@
 var closeModal = document.getElementById("close-modal");
 var infoBtn = document.getElementById("info-btn");
 var meetingID = document.getElementById("meeting-id");
+
 infoBtn.onclick = function () {
   document.getElementById("temp-background").style.display = "block";
 };
