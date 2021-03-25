@@ -27,6 +27,8 @@ body {
   position: absolute;
   left: 10px;
   top: 10px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 button {
