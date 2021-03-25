@@ -46,6 +46,11 @@
       }
       .clearfix {
         display: inline-block;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
       }
     </style>
   </head>
@@ -75,7 +80,7 @@
     ></a>
 
     <video autoplay muted loop id="myVideo">
-      <!-- <source src="assets/glitch_1.mp4" type="video/mp4" /> -->
+      <source src="assets/glitch_1.mp4" type="video/mp4" />
     </video>
 
     <video id="self-video" autoplay>
@@ -92,14 +97,18 @@
       </div>
     </div>
 
-    <!-- <div id="monitor">
-      <div id="screen">
-        <div id="crt" class="on">
-          <div class="scanline"></div>
-          <div class="terminal"></div>
+    <div id="outer-screen">
+    </div>
+
+    <div id="monitor">
+        <div id="screen">
+          <div id="crt" class="on">
+            <!-- <pre id="ascii-container-webrtc"></pre> -->
+            <div class="scanline"></div>
+            <div class="terminal"></div>
+          </div>
         </div>
-      </div>
-    </div> -->
+    </div>
   </body>
   <script src="./assets/js/create-ascii.js"></script>
   <script src="./assets/js/create.js"></script>
