@@ -9,7 +9,10 @@
     <script src="./assets/js/create.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style/animations.css" />
     <link rel="stylesheet" type="text/css" href="assets/style/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style type="text/css">
       html,
       body {
@@ -47,11 +50,29 @@
       }
     </style>
   </head>
-  
+
   <body>
+    <div id="temp-background">
+      <div id="modal">
+        <p class="center">Room ID:</p>
+        <p id="meeting-id" class="center"></p>
+        <center><button id="close-modal">Close</button></center>
+      </div>
+    </div>
+
+    <button id="info-btn">
+      <i class="fa fa-info fa-2x" aria-hidden="true"></i>
+    </button>
+
     <a href="./index.html">
-			<button id="close-btn"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button
-		></a>
+      <button id="close-btn">
+        <i class="fa fa-times fa-2x" aria-hidden="true"></i></button
+    ></a>
+    <a href="https://github.com/IshaanOhri/feather" target="_blank">
+      <button id="share-btn">
+        <i class="fa fa-github fa-2x" aria-hidden="true"></i></button
+    ></a>
+
     <video autoplay muted loop id="myVideo">
       <source src="assets/glitch_1.mp4" type="video/mp4" />
     </video>
@@ -79,12 +100,25 @@
     </div> -->
   </body>
   <script>
-    // example using webrtc media stream in video element
+    var closeModal = document.getElementById("close-modal");
+    var infoBtn = document.getElementById("info-btn");
+
+    infoBtn.onclick = function () {
+      document.getElementById("temp-background").style.display = "block";
+    };
+
+    closeModal.onclick = function () {
+      document.getElementById("temp-background").style.display = "none";
+      var el = document.getElementById("meeting-id");
+      navigator.clipboard.writeText(el.innerHTML)
+    };
+
     var webcamJscii = new Jscii({
       container: document.getElementById("ascii-container-webrtc"),
       el: document.getElementById("jscii-element-webrtc"),
       webrtc: true,
-      selfVideo: document.getElementById("self-video")
+      selfVideo: document.getElementById("self-video"),
+      meetingID: document.getElementById("meeting-id"),
     });
   </script>
 </html>

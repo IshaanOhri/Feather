@@ -31,17 +31,52 @@ button {
   background: black;
 }
 
-#close-btn{
+#close-btn {
   padding: 5px 10px;
   border: 5px solid white;
   box-shadow: 5px 5px #343434;
-  outline: none;
-  width: fit-content;
-  line-height: 120%;
-  background: black;
   position: absolute;
   right: 30px;
   bottom: 30px;
+}
+
+#share-btn {
+  padding: 5px 10px;
+  border: 5px solid white;
+  box-shadow: 5px 5px #343434;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+#info-btn{
+  padding: 5px 15px;
+  border: 5px solid white;
+  box-shadow: 5px 5px #343434;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+#temp-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#modal{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px;
+  border: 5px solid white;
+  box-shadow: 5px 5px #343434;
+  background-color: black;
+  font-size: large;
+  line-height: 120%;
 }
 
 button:active {
@@ -128,11 +163,7 @@ pre {
   ); /* Scale the font-size relative to the minimum screen dimension */
   position: relative;
   background: #119c5e;
-  background-image: radial-gradient(
-    ellipse,
-    #119c5e 0%,
-    #050505 90%
-  );
+  background-image: radial-gradient(ellipse, #119c5e 0%, #050505 90%);
   animation: on 2s linear;
   transition: all 0.5s;
   z-index: -1;

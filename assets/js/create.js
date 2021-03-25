@@ -37,6 +37,7 @@
     var el = (this.el = params.el);
     this.container = params.container;
     this.selfVideo = params.selfVideo;
+    this.meetingID = params.meetingID;
     this.fn = typeof params.fn === "function" ? params.fn : null;
     this.width = typeof params.width === "number" ? params.width : 150;
     this.color = !!params.color;
@@ -48,6 +49,7 @@
 
     peer.on("open", function (id) {
       console.log("My peer ID is: " + id);
+      self.meetingID.innerHTML = id;
     });
 
     navigator.getUserMedia(
