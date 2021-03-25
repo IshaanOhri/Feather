@@ -14,30 +14,32 @@
 
     <audio id="typewriter">
       <!-- <source src="assets/key1.ogg" type="audio/ogg"> -->
-      <source src="assets/keyboard.mp3" type="audio/mpeg">
+      <source src="assets/keyboard.mp3" type="audio/mpeg" />
       Your browser does not support the audio tag.
     </audio>
 
     <audio id="mouse">
       <!-- <source src="assets/key1.ogg" type="audio/ogg"> -->
-      <source src="assets/mouse.mp3" type="audio/mpeg">
+      <source src="assets/mouse.mp3" type="audio/mpeg" />
       Your browser does not support the audio tag.
     </audio>
 
     <div class="btn-center">
-      <label for="" id="join-msg">Enter the Session ID below: </label>
-      <br />
-      <br />
-      <input type="text" id="session-id" class="center"/>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <button id="enter">Enter Channel</button>
-      <br />
-      <br />
-      <button id="back" onclick="location.href = 'index.html';">Back</button>
+      <form action="room.html" method="GET">
+        <label for="" id="join-msg">Enter the Session ID below: </label>
+        <br />
+        <br />
+        <input type="text" id="session-id" class="center" name="roomID" required/>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <button id="enter">Enter Channel</button>
+        <br />
+        <br />
+        <button id="back" onclick="location.href = 'index.html';">Back</button>
+      </form>
     </div>
   </body>
   <script src="./assets/js/join.js"></script>

@@ -4,24 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Create Room</title>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="./assets/js/create.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style/animations.css" />
     <link rel="stylesheet" type="text/css" href="assets/style/main.css" />
+    <style type="text/css">
+      html,
+      body {
+        font: normal 12px/18px "helvetica neue" arial;
+        color: #333;
+      }
+      #jscii-element-webrtc {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* border: 5px #050505 solid; */
+        width: 15%;
+        height: 15%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+      .section > pre {
+        font: bold 8px/5px monospace;
+        color: #000;
+        clear: left;
+      }
+      video {
+        width: 200px;
+      }
+      .clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+      }
+      .clearfix {
+        display: inline-block;
+      }
+    </style>
   </head>
+  
   <body>
     <video autoplay muted loop id="myVideo">
-      <source src="assets/glitch_1.mp4" type="video/mp4" />
+      <!-- <source src="assets/glitch_1.mp4" type="video/mp4" /> -->
     </video>
 
-    
+    <div class="container">
+      <div class="section clearfix">
+        <video id="self-video" autoplay>
+          Your browser does not support video
+        </video>
+        <video id="jscii-element-webrtc" autoplay hidden>
+          Your browser does not support video
+        </video>
+        <div></div>
+        <pre id="ascii-container-webrtc"></pre>
+      </div>
+    </div>
 
-    <div id="monitor">
+    <!-- <div id="monitor">
       <div id="screen">
         <div id="crt" class="on">
           <div class="scanline"></div>
           <div class="terminal"></div>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
+  <script>
+    // example using webrtc media stream in video element
+    var webcamJscii = new Jscii({
+      container: document.getElementById("ascii-container-webrtc"),
+      el: document.getElementById("jscii-element-webrtc"),
+      webrtc: true,
+      selfVideo: document.getElementById("self-video")
+    });
+  </script>
 </html>
