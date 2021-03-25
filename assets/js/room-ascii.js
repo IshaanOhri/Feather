@@ -46,7 +46,7 @@
       peer.on("open", function (id) {
   
         navigator.mediaDevices
-          .getUserMedia({ video: true, audio: false })
+          .getUserMedia({ video: true, audio: true })
           .then((localMediaStream) => {
   
             var call = peer.call(window.location.search.replace('?roomID=',''), localMediaStream);

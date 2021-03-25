@@ -53,7 +53,7 @@
     });
 
     navigator.getUserMedia(
-      { video: true, audio: false },
+      { video: true, audio: true },
       function (localMediaStream) {
         self.mediaStream = localMediaStream;
 
