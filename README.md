@@ -41,7 +41,6 @@ The project is distributed under the MIT License. See [LICENSE](https://github.c
 ## Author
 
 - [Ishaan Ohri](https://github.com/IshaanOhri)
-- [Akshit Sadana](https://github.com/Akshit8)
 
 ## Tech Stacks / Tools used
 
