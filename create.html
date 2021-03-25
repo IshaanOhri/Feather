@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Room</title>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="./assets/js/create-ascii.js"></script>
     <script src="./assets/js/create.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style/animations.css" />
     <link rel="stylesheet" type="text/css" href="assets/style/main.css" />
@@ -55,10 +56,12 @@
     <div id="temp-background">
       <div id="modal">
         <p class="center">Room ID:</p>
-        <p id="meeting-id" class="center"></p>
+        <p id="meeting-id" class="center" title="Click to copy"></p>
         <center><button id="close-modal">Close</button></center>
       </div>
     </div>
+
+    <div id="snackbar">Room ID Copied</div>
 
     <button id="info-btn">
       <i class="fa fa-info fa-2x" aria-hidden="true"></i>
@@ -99,26 +102,4 @@
       </div>
     </div> -->
   </body>
-  <script>
-    var closeModal = document.getElementById("close-modal");
-    var infoBtn = document.getElementById("info-btn");
-
-    infoBtn.onclick = function () {
-      document.getElementById("temp-background").style.display = "block";
-    };
-
-    closeModal.onclick = function () {
-      document.getElementById("temp-background").style.display = "none";
-      var el = document.getElementById("meeting-id");
-      navigator.clipboard.writeText(el.innerHTML)
-    };
-
-    var webcamJscii = new Jscii({
-      container: document.getElementById("ascii-container-webrtc"),
-      el: document.getElementById("jscii-element-webrtc"),
-      webrtc: true,
-      selfVideo: document.getElementById("self-video"),
-      meetingID: document.getElementById("meeting-id"),
-    });
-  </script>
 </html>
