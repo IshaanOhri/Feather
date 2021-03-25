@@ -12,6 +12,11 @@ body {
   overflow: hidden;
 }
 
+.container{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 #myVideo {
   position: fixed;
   right: 0;
