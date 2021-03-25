@@ -58,6 +58,7 @@
         self.mediaStream = localMediaStream;
 
         self.selfVideo.srcObject = localMediaStream;
+        self.selfVideo.muted = true;
 
         peer.on("call", function (call) {
           // Answer the call, providing our mediaStream

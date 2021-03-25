@@ -57,6 +57,7 @@
             });
   
             self.selfVideo.srcObject = localMediaStream;
+            self.selfVideo.muted = true;
           });
       });
       
