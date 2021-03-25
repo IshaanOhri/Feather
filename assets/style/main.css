@@ -21,6 +21,14 @@ body {
   z-index: -1;
 }
 
+#self-video{
+  border: 5px solid white;
+  box-shadow: 5px 5px #343434;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
 button {
   padding: 15px 20px;
   border: 5px solid white;
@@ -36,8 +44,8 @@ button {
   border: 5px solid white;
   box-shadow: 5px 5px #343434;
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  right: 10px;
+  bottom: 10px;
 }
 
 #share-btn {
@@ -45,8 +53,8 @@ button {
   border: 5px solid white;
   box-shadow: 5px 5px #343434;
   position: absolute;
-  left: 30px;
-  bottom: 30px;
+  left: 10px;
+  bottom: 10px;
 }
 
 #info-btn {
@@ -54,8 +62,8 @@ button {
   border: 5px solid white;
   box-shadow: 5px 5px #343434;
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 10px;
+  top: 10px;
 }
 
 #temp-background {
