@@ -36,7 +36,7 @@ Any contributions you make are **greatly appreciated**.
 
 ## License
 
-The project is distributed under the MIT License. See [LICENSE](https://github.com/IshaanOhri/Spreen/blob/master/LICENSE) for more information.
+The project is distributed under the MIT License. See [LICENSE](https://github.com/IshaanOhri/feather/blob/master/LICENSE) for more information.
 
 ## Author
 
