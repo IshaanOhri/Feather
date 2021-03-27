@@ -3,6 +3,12 @@ var infoBtn = document.getElementById("info-btn");
 var meetingID = document.getElementById("meeting-id");
 var mouse = document.getElementById("mouse");
 
+function mouseClick() {
+  mouse.pause();
+  mouse.currentTime = 0;
+  mouse.play();
+}
+
 infoBtn.onclick = function () {
   mouse.pause();
   mouse.currentTime = 0;
@@ -23,7 +29,7 @@ meetingID.onclick = function () {
   mouse.pause();
   mouse.currentTime = 0;
   mouse.play();
-  
+
   navigator.clipboard.writeText(meetingID.innerHTML);
   var x = document.getElementById("snackbar");
 
