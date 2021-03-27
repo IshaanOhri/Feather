@@ -40,7 +40,8 @@ Copy the Room ID.
 
 #### 3. Join room
 
-Open `index.html` in a browser and choose the *Join* option.
+Open `index.html` in a browser and choose the **Join** option.
+
 Enter the copied Room ID and choose **Enter Room** option.
 
 ## Contributing
