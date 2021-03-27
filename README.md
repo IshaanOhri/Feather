@@ -35,13 +35,13 @@ git clone https://github.com/IshaanOhri/feather
 ```
 #### 2. Create room
 
-Open `index.html` in a browser and choose the *Create* option.
+Open `index.html` in a browser and choose the **Create** option.
 Copy the Room ID.
 
 #### 3. Join room
 
 Open `index.html` in a browser and choose the *Join* option.
-Enter the copied Room ID and choose *Enter Room* option.
+Enter the copied Room ID and choose **Enter Room** option.
 
 ## Contributing
 
