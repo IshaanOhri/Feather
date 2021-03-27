@@ -66,6 +66,10 @@ The project is distributed under the MIT License. See [LICENSE](https://github.c
 ## Tech Stacks / Tools used
 
 <p>
+  <img src="https://github.com/IshaanOhri/IshaanOhri/blob/master/assets/webrtc.png" height=40 hspace=20>
+  <img src="https://github.com/IshaanOhri/IshaanOhri/blob/master/assets/html.png" height=40 hspace=20>
+  <img src="https://github.com/IshaanOhri/IshaanOhri/blob/master/assets/css.png" height=40 hspace=20>
+  <img src="https://github.com/IshaanOhri/IshaanOhri/blob/master/assets/js.png" height=40 hspace=20>
 </p>
 
 <br>
