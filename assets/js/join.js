@@ -25,7 +25,7 @@ enter.onclick = function () {
   mouse.currentTime = 0;
   mouse.play();
 
-  setTimeout(() => {
-    // location.href = "create.html";
-  }, 500);
+  // setTimeout(() => {
+  //   // location.href = "create.html";
+  // }, 500);
 };
