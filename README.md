@@ -1,6 +1,6 @@
 <code>
   <h1 align="center">Feather</h1>
-  <h3 align="center">A light weight video calling service</h3>
+  <h3 align="center">A simple to use, lightweight video calling service</h3>
 </code>
 
 <div align="center">
@@ -12,7 +12,18 @@
 <br>
 
 <p align="center">
-Description
+
+_During the lockdown period, the only means of connecting to our dear ones is through a video call. But at times the video becomes laggy or pixilated and it gets frustrating that we can't view the other person clearly. This leaves us with the only other solution, an audio call. But audio calls are just too boring!_
+
+_Well, not any more. Connect to your dear ones using <b>Feather</b>._
+
+_<b>Feather</b> is a simple to use, lightweight video calling service that lets you connect to your dear ones even in the poorest of networks._
+
+_So how exactly does <b>Feather</b> work?_
+
+_<b>Feather</b> converts your video stream into ASCII stream right before transmission, in-order to provide a seamless user experience, simply because transmission of text requires less bandwidth as compared to transmission of a video stream._
+
+_Conventional video calling services transmit video and audio, while <b>Feather</b> transmits text and audio._
 </p>
 
 ## Steps to start server
@@ -22,7 +33,15 @@ Description
 ```
 git clone https://github.com/IshaanOhri/feather
 ```
+#### 2. Create room
 
+Open `index.html` in a browser and choose the *Create* option.
+Copy the Room ID.
+
+#### 3. Join room
+
+Open `index.html` in a browser and choose the *Join* option.
+Enter the copied Room ID and choose *Enter Room* option.
 
 ## Contributing
 
